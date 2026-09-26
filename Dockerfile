@@ -51,7 +51,7 @@ RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  $HOME/.vnc
 RUN echo 'admin123@aA' | vncpasswd -f > $HOME/.vnc/passwd
-RUN echo '/bin/env  MOZ_FAKE_NO_SANDBOX=1  dbus-launch startlxqt'  > $HOME/.vnc/xstartup
+RUN echo '/bin/env  MOZ_FAKE_NO_SANDBOX=1  dbus-launch lxqt-session'  > $HOME/.vnc/xstartup
 RUN chmod 600 $HOME/.vnc/passwd
 RUN chmod 755 $HOME/.vnc/xstartup
 RUN echo 'whoami ' >>/luo.sh
